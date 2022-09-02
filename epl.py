@@ -24,7 +24,6 @@ for i in range(len(df['Team'])):
 
 class Create_Team:
     def __init__(self, team_choice):
-        team_choice='norwich-city'
         self.team_url = f'https://www.skysports.com/{team_choice}-squad'
         self.response_team = requests.get(self.team_url)
         self.soup_team = BeautifulSoup(self.response_team.text, 'html.parser')
